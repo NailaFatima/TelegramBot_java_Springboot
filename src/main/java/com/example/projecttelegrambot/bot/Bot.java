@@ -40,12 +40,14 @@ public class Bot extends TelegramLongPollingBot {
             if(msg.startsWith("/poll")) {
                 pollController.handlePollCommand(chatId, msg);
                 //pollController.sendPoll(chatId, 1L, "What is your favorite color?", new String[]{"Red", "Green", "Blue"});
-            } else if(msg.startsWith("/start")) {
-                sendMessage(chatId, "Hello! I am DostiVen Bot. How can I help you?");
-            } else{
-                sendMessage(chatId, "Sorry, I don't understand this command: " + msg);
             }
 
+            else{
+                sendMessage(chatId, "Hello, How can I help? ");
+            }
+
+        }else if(update.hasCallbackQuery()){
+            pollController.handleCallbackQuery(update.getCallbackQuery());
         }
     }
     public void sendMessage(String chatId, String responseMessage) {
