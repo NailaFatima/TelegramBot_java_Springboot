@@ -3,9 +3,13 @@ Telegram Bot with Spring Boot:
 This project is a Telegram Bot implemented using Java and Spring Boot. It provides various features like handling text messages, sending media files, creating polls, and integrating interactive buttons, making it an extensible and robust bot framework for diverse use cases.
 
 Test instructions:
+
 /poll <question> <option1,option2,...>
+
 example:
+
 /poll Invest in Bitcoin or Etherium? Bitcoin,Etherium,None
+
 
 Features:
 Interactive Polls: Allows creating polls with inline buttons for user responses.
